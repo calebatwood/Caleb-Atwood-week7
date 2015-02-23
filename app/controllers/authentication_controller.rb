@@ -1,7 +1,7 @@
 class AuthenticationController < ApplicationController
 
   def create
-    user = User.find_by_email(params[:username])
+    user = User.find_by_username(params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to users_path
