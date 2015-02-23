@@ -1,0 +1,21 @@
+<h2>Courses Index</h2>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Day or night?</th>
+      <th>---</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+    <tr>
+      <td> <%= course.title %></td>
+      <td> <%= course.day_time %></td>
+      <td> <%= link_to "Edit", edit_course_path(course) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
