@@ -1,1 +1,20 @@
-Users Index
+<h2>Users Index</h2>
+<br>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>About</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td> <%= user.username %></td>
+      <td> <%= user.about %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
