@@ -1,0 +1,20 @@
+<%= form_for(@course) do |f| %>
+
+<div>
+  <%= f.label :title %>
+</div>
+<div>
+  <%= f.text_field :title %>
+</div>
+<div>
+  <%= f.label :day_class %>
+</div>
+<div>
+  <%= f.check_box :day_class %>
+</div>
+<br>
+<div>
+  <%= f.submit "Create Course" %>
+</div>
+
+<% end %>
